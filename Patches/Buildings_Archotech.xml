@@ -801,10 +801,12 @@
     <match Class="PatchOperationReplace">
       <xpath>/Defs/ThingDef[defName="Weapon_GrenadeMechanite"]/recipeMaker</xpath>
       <value>
+	  <recipeMaker>
 		<researchPrerequisite>ArchotechMechaniteWeapon</researchPrerequisite>
-      <skillRequirements>
-        <Crafting>19</Crafting>
-      </skillRequirements>
+        <skillRequirements>
+          <Crafting>19</Crafting>
+        </skillRequirements>
+	  </recipeMaker>
       </value>
     </match>
   </Operation>
