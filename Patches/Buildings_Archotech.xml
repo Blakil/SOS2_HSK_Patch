@@ -782,7 +782,7 @@
       <li>Save Our Ship 2</li>
     </mods>
     <match Class="PatchOperationReplace">
-      <xpath>/Defs/RecipeDef[defName="Weapon_GrenadeMechanite"]/costList</xpath>
+      <xpath>/Defs/ThingDef[defName="Weapon_GrenadeMechanite"]/costList</xpath>
       <value>
 		<costList>
           <ComponentUltra>5</ComponentUltra>
@@ -799,7 +799,7 @@
       <li>Save Our Ship 2</li>
     </mods>
     <match Class="PatchOperationReplace">
-      <xpath>/Defs/RecipeDef[defName="Weapon_GrenadeMechanite"]/recipeMaker</xpath>
+      <xpath>/Defs/ThingDef[defName="Weapon_GrenadeMechanite"]/recipeMaker</xpath>
       <value>
 		<researchPrerequisite>ArchotechMechaniteWeapon</researchPrerequisite>
       <skillRequirements>
