@@ -11,7 +11,7 @@
       <xpath>/Defs</xpath>
       <value>
       	<ArchitectSense.DesignationSubCategoryDef>
-          <defName>SubCategory_ShipWalls</defName>
+          <defName>SubCategory_ShipHulls</defName>
           <label>Ship Hulls</label>
           <description>Ship hulls.</description>
           <defNames>
@@ -38,6 +38,7 @@
           <description>Ship corners.</description>
           <defNames>
             <li>Ship_Corner_OneOne</li>
+			<li>Ship_Corner_OneOneFlip</li>
             <li>Ship_Corner_OneTwo</li>
             <li>Ship_Corner_OneTwoFlip</li>
             <li>Ship_Corner_OneThree</li>
@@ -50,6 +51,28 @@
     </match>
   </Operation>
 
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Save Our Ship 2</li>
+    </mods>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs</xpath>
+      <value>
+      	<ArchitectSense.DesignationSubCategoryDef>
+          <defName>SubCategory_ShipLifeSupports</defName>
+          <label>Life Support</label>
+          <description>Life support systems.</description>
+          <defNames>
+            <li>Ship_LifeSupport</li>
+            <li>Ship_LifeSupport_Small</li>
+          </defNames>
+          <designationCategory>Ship</designationCategory>
+          <debug>false</debug>
+        </ArchitectSense.DesignationSubCategoryDef>
+      </value>
+    </match>
+  </Operation>
+  
   <Operation Class="PatchOperationFindMod">
     <mods>
       <li>Save Our Ship 2</li>
@@ -89,6 +112,7 @@
             <li>Ship_Engine_Small</li>
             <li>Ship_Engine</li>
             <li>Ship_Engine_Interplanetary</li>
+			<li>Ship_Engine_Large</li>
           </defNames>
           <designationCategory>Ship</designationCategory>
           <debug>false</debug>
@@ -109,7 +133,7 @@
       <xpath>/Defs/ThingDef[defName="Ship_Beam_Unpowered"]/costList</xpath>
       <value>
         <costList>
-          <ComponentSpacer>2</ComponentSpacer>
+          <ComponentAdvanced>2</ComponentAdvanced>
         </costList>
       </value>
     </match>
@@ -150,7 +174,7 @@
       <xpath>/Defs/ThingDef[defName="Ship_Beam"]/costList</xpath>
       <value>
         <costList>
-          <ComponentSpacer>4</ComponentSpacer>
+          <ComponentAdvanced>4</ComponentAdvanced>
           <Wire>20</Wire>
         </costList>
       </value>
@@ -193,7 +217,7 @@
       <xpath>/Defs/ThingDef[defName="Ship_Corner_OneOne"]/costList</xpath>
       <value>
         <costList>
-          <ComponentSpacer>2</ComponentSpacer>
+          <ComponentAdvanced>2</ComponentAdvanced>
         </costList>
       </value>
     </match>
@@ -223,6 +247,46 @@
     </match>
   </Operation>
 
+  <!-- Ship_Corner_OneOneFlip -->
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Save Our Ship 2</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[defName="Ship_Corner_OneOneFlip"]/costList</xpath>
+      <value>
+        <costList>
+          <ComponentAdvanced>2</ComponentAdvanced>
+        </costList>
+      </value>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Save Our Ship 2</li>
+    </mods>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName="Ship_Corner_OneOneFlip"]</xpath>
+      <value>
+        <stuffCategories>
+          <li>RuggedMetallic</li>
+        </stuffCategories>
+        <costStuffCount>12</costStuffCount>
+      </value>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Save Our Ship 2</li>
+    </mods>
+    <match Class="PatchOperationRemove">
+      <xpath>/Defs/ThingDef[defName="Ship_Corner_OneOneFlip"]/designatorDropdown</xpath>
+    </match>
+  </Operation>
+  
 
  <!-- Ship_Corner_OneTwo -->
 
@@ -234,7 +298,7 @@
       <xpath>/Defs/ThingDef[defName="Ship_Corner_OneTwo"]/costList</xpath>
       <value>
         <costList>
-          <ComponentSpacer>3</ComponentSpacer>
+          <ComponentAdvanced>3</ComponentAdvanced>
         </costList>
       </value>
     </match>
@@ -276,7 +340,7 @@
       <xpath>/Defs/ThingDef[defName="Ship_Corner_OneTwoFlip"]/costList</xpath>
       <value>
         <costList>
-          <ComponentSpacer>3</ComponentSpacer>
+          <ComponentAdvanced>3</ComponentAdvanced>
         </costList>
       </value>
     </match>
@@ -318,7 +382,7 @@
       <xpath>/Defs/ThingDef[defName="Ship_Corner_OneThree"]/costList</xpath>
       <value>
         <costList>
-          <ComponentSpacer>4</ComponentSpacer>
+          <ComponentAdvanced>4</ComponentAdvanced>
         </costList>
       </value>
     </match>
@@ -358,7 +422,7 @@
       <xpath>/Defs/ThingDef[defName="Ship_Corner_OneThreeFlip"]/costList</xpath>
       <value>
         <costList>
-          <ComponentSpacer>4</ComponentSpacer>
+          <ComponentAdvanced>4</ComponentAdvanced>
         </costList>
       </value>
     </match>
@@ -402,6 +466,7 @@
 			     <ReinforcedGlass>40</ReinforcedGlass>
 			     <ElectronicComponents>2</ElectronicComponents>
 			     <ComponentSpacer>2</ComponentSpacer>
+				 <ComponentAdvanced>3</ComponentAdvanced>
 			     <AdvMechanism>1</AdvMechanism>
         </costList>
       </value>
@@ -434,7 +499,8 @@
       <xpath>/Defs/ThingDef[defName="ShipInside_PassiveCooler"]/costList</xpath>
       <value>
         <costList>
-			     <ComponentSpacer>4</ComponentSpacer>
+			     <ComponentSpacer>2</ComponentSpacer>
+				 <ComponentAdvanced>4</ComponentAdvanced>
 			     <AdvMechanism>1</AdvMechanism>
         </costList>
       </value>
@@ -501,7 +567,7 @@
       <xpath>/Defs/ThingDef[defName="ShipHullTile"]/costList</xpath>
       <value>
         <costList>
-			     <ComponentSpacer>1</ComponentSpacer>
+			     <ComponentAdvanced>1</ComponentAdvanced>
         </costList>
       </value>
     </match>
@@ -542,7 +608,8 @@
       <xpath>/Defs/ThingDef[defName="ShipHardpointSmall"]/costList</xpath>
       <value>
         <costList>
-			     <ComponentSpacer>2</ComponentSpacer>
+			     <ComponentAdvanced>2</ComponentAdvanced>
+				 <AdvMechanism>1</AdvMechanism>
         </costList>
       </value>
     </match>
@@ -592,7 +659,8 @@
       <xpath>/Defs/ThingDef[defName="ShipHardpoint"]/costList</xpath>
       <value>
         <costList>
-			     <ComponentSpacer>6</ComponentSpacer>
+			     <ComponentAdvanced>6</ComponentAdvanced>
+				 <AdvMechanism>3</AdvMechanism>
         </costList>
       </value>
     </match>
@@ -642,7 +710,8 @@
       <xpath>/Defs/ThingDef[defName="ShipHardpointExtraMedium"]/costList</xpath>
       <value>
         <costList>
-			     <ComponentSpacer>8</ComponentSpacer>
+			     <ComponentAdvanced>8</ComponentAdvanced>
+				 <AdvMechanism>4</AdvMechanism>
         </costList>
       </value>
     </match>
@@ -692,7 +761,8 @@
       <xpath>/Defs/ThingDef[defName="ShipHardpointLarge"]/costList</xpath>
       <value>
         <costList>
-			     <ComponentSpacer>10</ComponentSpacer>
+			     <ComponentAdvanced>10</ComponentAdvanced>
+				 <AdvMechanism>5</AdvMechanism>
         </costList>
       </value>
     </match>
@@ -999,8 +1069,12 @@
       <xpath>/Defs/ThingDef[defName="Ship_LifeSupport"]/costList</xpath>
       <value>
         <costList>
-			     <ComponentSpacer>8</ComponentSpacer>
+			     <ComponentSpacer>2</ComponentSpacer>
+				 <ComponentAdvanced>6</ComponentAdvanced>
 			     <Electronics>2</Electronics>
+				 <Glass>40</Glass>
+				 <Plastic>25</Plastic>
+				 <Dirt>40</Dirt>
         </costList>
       </value>
     </match>
@@ -1016,12 +1090,66 @@
         <stuffCategories>
           <li>RuggedMetallic</li>
         </stuffCategories>
-        <costStuffCount>120</costStuffCount>
+        <costStuffCount>200</costStuffCount>
+      </value>
+    </match>
+  </Operation>
+  
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Save Our Ship 2</li>
+    </mods>
+    <match Class="PatchOperationRemove">
+      <xpath>/Defs/ThingDef[defName="Ship_LifeSupport"]/designatorDropdown</xpath>
+    </match>
+  </Operation>
+  
+
+<!-- Small Ship_LifeSupport -->
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Save Our Ship 2</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[defName="Ship_LifeSupport_Small"]/costList</xpath>
+      <value>
+        <costList>
+				 <ComponentAdvanced>4</ComponentAdvanced>
+			     <Electronics>1</Electronics>
+				 <Glass>20</Glass>
+				 <Plastic>15</Plastic>
+				 <Dirt>20</Dirt>
+        </costList>
       </value>
     </match>
   </Operation>
 
-
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Save Our Ship 2</li>
+    </mods>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName="Ship_LifeSupport_Small"]</xpath>
+      <value>
+        <stuffCategories>
+          <li>RuggedMetallic</li>
+        </stuffCategories>
+        <costStuffCount>75</costStuffCount>
+      </value>
+    </match>
+  </Operation>
+  
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Save Our Ship 2</li>
+    </mods>
+    <match Class="PatchOperationRemove">
+      <xpath>/Defs/ThingDef[defName="Ship_LifeSupport_Small"]/designatorDropdown</xpath>
+    </match>
+  </Operation>
+  
+  
 <!-- ShipCapacitor -->
 
   <Operation Class="PatchOperationFindMod">
@@ -1355,5 +1483,151 @@
     </match>
   </Operation>
 
+<!-- ShipCloakingDevice -->
 
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Save Our Ship 2</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[defName="ShipCloakingDevice"]/costList</xpath>
+      <value>
+        <costList>
+			     <ComponentSpacer>20</ComponentSpacer>
+				 <GoldBar>80</GoldBar>
+				 <AdvMechanism>8</AdvMechanism>
+				 <Microchips>4</Microchips>
+				 <CarbonAlloy>60</CarbonAlloy>
+        </costList>
+      </value>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Save Our Ship 2</li>
+    </mods>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName="ShipCloakingDevice"]</xpath>
+      <value>
+        <stuffCategories>
+          <li>SolidMetallic</li>
+        </stuffCategories>
+        <costStuffCount>320</costStuffCount>
+      </value>
+    </match>
+  </Operation>
+
+<!-- Ship_SensorClusterAdv -->
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Save Our Ship 2</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[defName="Ship_SensorClusterAdv"]/costList</xpath>
+      <value>
+        <costList>
+			     <ComponentSpacer>10</ComponentSpacer>
+				 <ComponentIndustrial>20</ComponentIndustrial>
+				 <GoldBar>40</GoldBar>
+				 <Microchips>2</Microchips>
+				 <Glass>70</Glass>
+        </costList>
+      </value>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Save Our Ship 2</li>
+    </mods>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName="Ship_SensorClusterAdv"]</xpath>
+      <value>
+        <stuffCategories>
+          <li>SolidMetallic</li>
+        </stuffCategories>
+        <costStuffCount>320</costStuffCount>
+      </value>
+    </match>
+  </Operation>
+
+<!-- ShipInside_PassiveVent -->
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Save Our Ship 2</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[defName="ShipInside_PassiveVent"]/costList</xpath>
+      <value>
+        <costList>
+			     <ComponentAdvanced>1</ComponentAdvanced>
+				 <ComponentIndustrial>2</ComponentIndustrial>
+				 <CarbonAlloy>15</CarbonAlloy>
+        </costList>
+      </value>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Save Our Ship 2</li>
+    </mods>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName="ShipInside_PassiveVent"]</xpath>
+      <value>
+        <stuffCategories>
+          <li>SolidMetallic</li>
+        </stuffCategories>
+        <costStuffCount>40</costStuffCount>
+      </value>
+    </match>
+  </Operation>
+  
+ <!-- Ship_Engine_Large -->
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Save Our Ship 2</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[defName="Ship_Engine_Large"]/costList</xpath>
+      <value>
+        <costList>
+			     <ComponentUltra>8</ComponentUltra>
+				 <ComponentAdvanced>14</ComponentAdvanced>
+				 <Microchips>2</Microchips>
+				 <DepletedUranium>80</DepletedUranium>
+				 <Plastic>120</Plastic>
+        </costList>
+      </value>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Save Our Ship 2</li>
+    </mods>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName="Ship_Engine_Large"]</xpath>
+      <value>
+        <stuffCategories>
+          <li>SolidMetallic</li>
+        </stuffCategories>
+        <costStuffCount>700</costStuffCount>
+      </value>
+    </match>
+  </Operation>
+  
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Save Our Ship 2</li>
+    </mods>
+    <match Class="PatchOperationRemove">
+      <xpath>/Defs/ThingDef[defName="Ship_Engine_Large"]/designatorDropdown</xpath>
+    </match>
+  </Operation>
+  
 </Patch>

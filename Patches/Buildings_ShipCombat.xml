@@ -869,5 +869,73 @@
       </value>
     </match>
   </Operation>
+  
+  <!-- ShipPurgePort -->
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Save Our Ship 2</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[defName="ShipPurgePort"]/costList</xpath>
+      <value>
+        <costList>
+		  <ComponentIndustrial>12</ComponentIndustrial>
+          <ComponentAdvanced>4</ComponentAdvanced>
+          <AdvMechanism>2</AdvMechanism>
+          <Electronics>1</Electronics>
+        </costList>
+      </value>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Save Our Ship 2</li>
+    </mods>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName="ShipPurgePort"]</xpath>
+      <value>
+        <stuffCategories>
+          <li>RuggedMetallic</li>
+        </stuffCategories>
+        <costStuffCount>125</costStuffCount>
+      </value>
+    </match>
+  </Operation>
+  
+<!-- ShipPurgePortLarge -->
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Save Our Ship 2</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[defName="ShipPurgePortLarge"]/costList</xpath>
+      <value>
+        <costList>
+		  <ComponentIndustrial>24</ComponentIndustrial>
+          <ComponentAdvanced>8</ComponentAdvanced>
+          <AdvMechanism>6</AdvMechanism>
+          <Electronics>3</Electronics>
+        </costList>
+      </value>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Save Our Ship 2</li>
+    </mods>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName="ShipPurgePortLarge"]</xpath>
+      <value>
+        <stuffCategories>
+          <li>RuggedMetallic</li>
+        </stuffCategories>
+        <costStuffCount>625</costStuffCount>
+      </value>
+    </match>
+  </Operation>
 
 </Patch>

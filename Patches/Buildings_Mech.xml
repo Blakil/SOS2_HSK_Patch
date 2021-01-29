@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+<!-- ShipAirlockMech -->
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Save Our Ship 2</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[defName="ShipAirlockMech"]/costList</xpath>
+      <value>
+        <costList>
+			     <ComponentSpacer>4</ComponentSpacer>
+			     <Electronics>1</Electronics>
+			     <AdvMechanism>1</AdvMechanism>
+        </costList>
+      </value>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Save Our Ship 2</li>
+    </mods>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName="ShipAirlockMech"]</xpath>
+      <value>
+        <stuffCategories>
+          <li>RuggedMetallic</li>
+        </stuffCategories>
+        <costStuffCount>60</costStuffCount>
+      </value>
+    </match>
+  </Operation>
+
+</Patch>

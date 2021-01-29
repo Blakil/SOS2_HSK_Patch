@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+<Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Save Our Ship 2</li>
+    </mods>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs</xpath>
+      <value>
+      	<ArchitectSense.DesignationSubCategoryDef>
+          <defName>SubCategory_ShipTurrets</defName>
+          <label>Ship Turrets</label>
+          <description> Ship Turrets.</description>
+          <defNames>
+            <li>ShipTurret_ACI</li>
+            <li>ShipTurret_ACII</li>
+			<li>ShipTurret_ACIII</li>
+          </defNames>
+          <designationCategory>Ship</designationCategory>
+          <debug>false</debug>
+        </ArchitectSense.DesignationSubCategoryDef>
+      </value>
+    </match>
+  </Operation>
+
+<!-- ShipTurret_ACI -->
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Save Our Ship 2</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[defName="ShipTurret_ACI"]/costList</xpath>
+      <value>
+        <costList>
+			     <ComponentAdvanced>4</ComponentAdvanced>
+				 <ComponentSpacer>2</ComponentSpacer>
+				 <Microchips>2</Microchips>
+				 <DepletedUranium>60</DepletedUranium>
+        </costList>
+      </value>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Save Our Ship 2</li>
+    </mods>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName="ShipTurret_ACI"]</xpath>
+      <value>
+        <stuffCategories>
+          <li>SolidMetallic</li>
+        </stuffCategories>
+        <costStuffCount>130</costStuffCount>
+      </value>
+    </match>
+  </Operation>
+  
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Save Our Ship 2</li>
+    </mods>
+    <match Class="PatchOperationRemove">
+      <xpath>/Defs/ThingDef[defName="ShipTurret_ACI"]/designatorDropdown</xpath>
+    </match>
+  </Operation>
+  
+<!-- ShipTurret_ACII -->
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Save Our Ship 2</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[defName="ShipTurret_ACII"]/costList</xpath>
+      <value>
+        <costList>
+			     <ComponentAdvanced>8</ComponentAdvanced>
+				 <ComponentSpacer>3</ComponentSpacer>
+				 <AdvMechanism>6</AdvMechanism>
+				 <CarbonAlloy>40</CarbonAlloy>
+				 <Microchips>3</Microchips>
+				 <DepletedUranium>110</DepletedUranium>
+        </costList>
+      </value>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Save Our Ship 2</li>
+    </mods>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName="ShipTurret_ACII"]</xpath>
+      <value>
+        <stuffCategories>
+          <li>SolidMetallic</li>
+        </stuffCategories>
+        <costStuffCount>380</costStuffCount>
+      </value>
+    </match>
+  </Operation>
+  
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Save Our Ship 2</li>
+    </mods>
+    <match Class="PatchOperationRemove">
+      <xpath>/Defs/ThingDef[defName="ShipTurret_ACII"]/designatorDropdown</xpath>
+    </match>
+  </Operation>
+  
+<!-- ShipTurret_ACIII -->
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Save Our Ship 2</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[defName="ShipTurret_ACIII"]/costList</xpath>
+      <value>
+        <costList>
+			     <ComponentUltra>8</ComponentUltra>
+				 <AdvMechanism>15</AdvMechanism>
+				 <ComponentSpacer>12</ComponentSpacer>
+				 <CarbonAlloy>90</CarbonAlloy>
+				 <Microchips>4</Microchips>
+				 <DepletedUranium>230</DepletedUranium>
+        </costList>
+      </value>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Save Our Ship 2</li>
+    </mods>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName="ShipTurret_ACIII"]</xpath>
+      <value>
+        <stuffCategories>
+          <li>SolidMetallic</li>
+        </stuffCategories>
+        <costStuffCount>860</costStuffCount>
+      </value>
+    </match>
+  </Operation>
+  
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Save Our Ship 2</li>
+    </mods>
+    <match Class="PatchOperationRemove">
+      <xpath>/Defs/ThingDef[defName="ShipTurret_ACIII"]/designatorDropdown</xpath>
+    </match>
+  </Operation>
+  
+</Patch>
