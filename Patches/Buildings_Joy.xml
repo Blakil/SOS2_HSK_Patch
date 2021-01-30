@@ -46,7 +46,7 @@
         <costList>
 			     <ComponentAdvanced>5</ComponentAdvanced>
 			     <Electronics>6</Electronics>
-				 <Microships>2</Microships>
+				 <Microchips>2</Microchips>
 			     <Glass>30</Glass>
 				 <Plastic>60</Plastic>
         </costList>
@@ -80,7 +80,7 @@
       <value>
         <costList>
 			     <ComponentUltra>10</ComponentUltra>
-				 <Microships>4</Microships>
+				 <Microchips>4</Microchips>
 			     <ReinforcedGlass>50</ReinforcedGlass>
 				 <BioMicrochips>2</BioMicrochips>
 				 <AIPersonaCore>1</AIPersonaCore>
