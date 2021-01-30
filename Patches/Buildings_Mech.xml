@@ -33,5 +33,297 @@
       </value>
     </match>
   </Operation>
+  
+<!-- ShipHullTileMech -->
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Save Our Ship 2</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[defName="ShipHullTileMech"]/costList</xpath>
+      <value>
+        <costList>
+			     <ComponentAdvanced>1</ComponentAdvanced>
+        </costList>
+      </value>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Save Our Ship 2</li>
+    </mods>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName="ShipHullTileMech"]</xpath>
+      <value>
+        <stuffCategories>
+          <li>RuggedMetallic</li>
+        </stuffCategories>
+        <costStuffCount>10</costStuffCount>
+      </value>
+    </match>
+  </Operation>
+  
+  <!-- Ship_BeamMech_Unpowered -->
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Save Our Ship 2</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[defName="Ship_BeamMech_Unpowered"]/costList</xpath>
+      <value>
+        <costList>
+          <ComponentAdvanced>2</ComponentAdvanced>
+        </costList>
+      </value>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Save Our Ship 2</li>
+    </mods>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName="Ship_BeamMech_Unpowered"]</xpath>
+      <value>
+        <stuffCategories>
+          <li>RuggedMetallic</li>
+        </stuffCategories>
+        <costStuffCount>20</costStuffCount>
+      </value>
+    </match>
+  </Operation>
+  
+<!-- Ship_BeamMech -->
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Save Our Ship 2</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[defName="Ship_BeamMech"]/costList</xpath>
+      <value>
+        <costList>
+          <ComponentAdvanced>4</ComponentAdvanced>
+          <Wire>20</Wire>
+        </costList>
+      </value>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Save Our Ship 2</li>
+    </mods>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName="Ship_BeamMech" and @ParentName="BuildingBase"]</xpath>
+      <value>
+        <stuffCategories>
+          <li>RuggedMetallic</li>
+        </stuffCategories>
+        <costStuffCount>20</costStuffCount>
+      </value>
+    </match>
+  </Operation>
+  
+  
+<!-- Ship_Corner_OneOne_Mech -->
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Save Our Ship 2</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[defName="Ship_Corner_OneOne_Mech"]/costList</xpath>
+      <value>
+        <costList>
+          <ComponentAdvanced>2</ComponentAdvanced>
+        </costList>
+      </value>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Save Our Ship 2</li>
+    </mods>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName="Ship_Corner_OneOne_Mech"]</xpath>
+      <value>
+        <stuffCategories>
+          <li>RuggedMetallic</li>
+        </stuffCategories>
+        <costStuffCount>12</costStuffCount>
+      </value>
+    </match>
+  </Operation>
+
+
+
+  <!-- Ship_Corner_OneOne_MechFlip -->
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Save Our Ship 2</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[defName="Ship_Corner_OneOne_MechFlip"]/costList</xpath>
+      <value>
+        <costList>
+          <ComponentAdvanced>2</ComponentAdvanced>
+        </costList>
+      </value>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Save Our Ship 2</li>
+    </mods>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName="Ship_Corner_OneOne_MechFlip"]</xpath>
+      <value>
+        <stuffCategories>
+          <li>RuggedMetallic</li>
+        </stuffCategories>
+        <costStuffCount>12</costStuffCount>
+      </value>
+    </match>
+  </Operation>
+
+
+
+ <!-- Ship_Corner_OneTwo_Mech -->
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Save Our Ship 2</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[defName="Ship_Corner_OneTwo_Mech"]/costList</xpath>
+      <value>
+        <costList>
+          <ComponentAdvanced>3</ComponentAdvanced>
+        </costList>
+      </value>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Save Our Ship 2</li>
+    </mods>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName="Ship_Corner_OneTwo_Mech"]</xpath>
+      <value>
+        <stuffCategories>
+          <li>RuggedMetallic</li>
+        </stuffCategories>
+        <costStuffCount>24</costStuffCount>
+      </value>
+    </match>
+  </Operation>
+
+
+
+ <!-- Ship_Corner_OneTwoFlip_Mech -->
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Save Our Ship 2</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[defName="Ship_Corner_OneTwoFlip_Mech"]/costList</xpath>
+      <value>
+        <costList>
+          <ComponentAdvanced>3</ComponentAdvanced>
+        </costList>
+      </value>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Save Our Ship 2</li>
+    </mods>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName="Ship_Corner_OneTwoFlip_Mech"]</xpath>
+      <value>
+        <stuffCategories>
+          <li>RuggedMetallic</li>
+        </stuffCategories>
+        <costStuffCount>24</costStuffCount>
+      </value>
+    </match>
+  </Operation>
+
+
+
+
+<!-- Ship_Corner_OneThree_Mech -->
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Save Our Ship 2</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[defName="Ship_Corner_OneThree_Mech"]/costList</xpath>
+      <value>
+        <costList>
+          <ComponentAdvanced>4</ComponentAdvanced>
+        </costList>
+      </value>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Save Our Ship 2</li>
+    </mods>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName="Ship_Corner_OneThree_Mech"]</xpath>
+      <value>
+        <stuffCategories>
+          <li>RuggedMetallic</li>
+        </stuffCategories>
+        <costStuffCount>36</costStuffCount>
+      </value>
+    </match>
+  </Operation>
+
+
+<!-- Ship_Corner_OneThreeFlip_Mech -->
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Save Our Ship 2</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[defName="Ship_Corner_OneThreeFlip_Mech"]/costList</xpath>
+      <value>
+        <costList>
+          <ComponentAdvanced>4</ComponentAdvanced>
+        </costList>
+      </value>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Save Our Ship 2</li>
+    </mods>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName="Ship_Corner_OneThreeFlip_Mech"]</xpath>
+      <value>
+        <stuffCategories>
+          <li>RuggedMetallic</li>
+        </stuffCategories>
+        <costStuffCount>36</costStuffCount>
+      </value>
+    </match>
+  </Operation>
+
 
 </Patch>

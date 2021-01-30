@@ -680,7 +680,7 @@
 				 <MagneticMaterial>120</MagneticMaterial>
 				 <AdvMechanism>70</AdvMechanism>
 				 <Microchips>8</Microchips>
-				 <Gold>250</Gold>
+				 <GoldBar>250</GoldBar>
 				 <AlphaPoly>20</AlphaPoly>
         </costList>
       </value>

@@ -200,6 +200,49 @@
   </Operation>
 
 
+  <!-- ShipHeatsinkLarge -->
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Save Our Ship 2</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[defName="ShipHeatsinkLarge"]/costList</xpath>
+      <value>
+        <costList>
+			    <ComponentSpacer>2</ComponentSpacer>
+				<Electronics>2</Electronics>
+			    <ComponentAdvanced>4</ComponentAdvanced>
+          <CopperBar>240</CopperBar>
+        </costList>
+      </value>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Save Our Ship 2</li>
+    </mods>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName="ShipHeatsinkLarge"]</xpath>
+      <value>
+        <stuffCategories>
+          <li>RuggedMetallic</li>
+        </stuffCategories>
+        <costStuffCount>400</costStuffCount>
+      </value>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Save Our Ship 2</li>
+    </mods>
+    <match Class="PatchOperationRemove">
+      <xpath>/Defs/ThingDef[defName="ShipHeatsink"]/constructEffect</xpath>
+    </match>
+  </Operation>
+  
   <!-- ShipCombatShieldGenerator -->
 
   <Operation Class="PatchOperationFindMod">
